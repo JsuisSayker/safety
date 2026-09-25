@@ -74,3 +74,10 @@ For remote terminals or headless systems:
 ```bash
 safety auth login --headless
 ```
+
+## Best practices
+
+- store the key in a secret manager instead of committing it to source control
+- rotate keys periodically if your team uses shared credentials
+- prefer `SAFETY_API_KEY` in CI pipelines so the secret stays out of command history and logs
+- use local browser login for developer machines and API keys for automated workflows
