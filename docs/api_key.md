@@ -54,3 +54,23 @@ Or with an environment variable and a project scan:
 ```bash
 SAFETY_API_KEY="your-api-key" safety scan --stage production
 ```
+
+## Step 5 - Verify the configuration
+
+Check the CLI status to confirm authentication is available:
+
+```bash
+safety auth status
+```
+
+If you are running a local interactive session, you may prefer the browser-based flow instead:
+
+```bash
+safety auth login
+```
+
+For remote terminals or headless systems:
+
+```bash
+safety auth login --headless
+```
