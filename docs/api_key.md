@@ -35,4 +35,22 @@ Once payment is complete, you'll be redirected to your account page.
 
 ## Step 4 - Copy your API key
 
-Copy your API Key from your account homepage - and you're done!
+Copy your API Key from your account homepage and store it in a secure secret manager or environment variable.
+
+Example:
+
+```bash
+export SAFETY_API_KEY="your-api-key"
+```
+
+You can then use it directly:
+
+```bash
+safety --key "$SAFETY_API_KEY" scan --output json
+```
+
+Or with an environment variable and a project scan:
+
+```bash
+SAFETY_API_KEY="your-api-key" safety scan --stage production
+```
