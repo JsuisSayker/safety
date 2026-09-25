@@ -81,3 +81,11 @@ safety auth login --headless
 - rotate keys periodically if your team uses shared credentials
 - prefer `SAFETY_API_KEY` in CI pipelines so the secret stays out of command history and logs
 - use local browser login for developer machines and API keys for automated workflows
+
+## Related commands
+
+- `safety auth login` — browser-based login for local development
+- `safety auth login --headless` — login flow for remote or terminal-only systems
+- `safety auth status` — verify current authentication state
+- `safety --key API_KEY scan` — run a scan with an explicit API key
+- `safety scan --output json` — save scan results in machine-readable format
